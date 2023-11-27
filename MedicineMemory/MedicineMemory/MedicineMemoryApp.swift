@@ -1,4 +1,3 @@
-//
 //  MedicineMemoryApp.swift
 //  MedicineMemory
 //
@@ -36,7 +35,7 @@ struct Medicine: Identifiable {
 struct ContentView: View {
     @EnvironmentObject var medicineData: MedicineData
     @State private var showingAddMedicineView = false
-    
+
     var body: some View {
         NavigationView {
             List {
@@ -45,19 +44,27 @@ struct ContentView: View {
                         Text("\(medicine.name) - \(medicine.dosage)")
                     }
                 }
+                .onDelete(perform: deleteMedicine) // Enable deletion on swipe
             }
             .navigationTitle("Medicine Reminder")
-            .navigationBarItems(trailing:
-                Button(action: {
-                    showingAddMedicineView.toggle()
-                }) {
-                    Image(systemName: "plus")
+            .navigationBarItems(
+                trailing: HStack {
+                    EditButton() // Enable Edit mode to enable deletion on selection
+                    Button(action: {
+                        showingAddMedicineView.toggle()
+                    }) {
+                        Image(systemName: "plus")
+                    }
                 }
             )
         }
         .sheet(isPresented: $showingAddMedicineView) {
             AddMedicineView()
         }
+    }
+
+    func deleteMedicine(at offsets: IndexSet) {
+        medicineData.medicines.remove(atOffsets: offsets)
     }
 }
 
