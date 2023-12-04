@@ -11,7 +11,7 @@ Once the project is open on Xcode.
 
 Navigate to MedicineMemory/MedicineMemory/MedicineMemoryApp.swift
 
-Once MedicineMemoryApp.swift click the run button.
+Once MedicineMemoryApp.swift is open click on the run button.
 
 Clicking run will automatically buid the project and run it on Xcode's built in iPhone simulator.
 
