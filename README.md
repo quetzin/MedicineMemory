@@ -1,12 +1,12 @@
 # MedicineMemory
 Quetzin Pimentel q_p12 and Hunter Lawrence yhf1
 
-#Set Up
+# Set Up
 For best results, use MacOS and Xcode as the IDE.
 
 After cloning or downloading this project, open the project on Xcode.
 
-#Running Software
+# Running Software
 Once the project is open on Xcode.
 
 Navigate to MedicineMemory/MedicineMemory/MedicineMemoryApp.swift
