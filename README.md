@@ -3,7 +3,7 @@ Quetzin Pimentel q_p12 and Hunter Lawrence yhf1
 
 # Set Up
 Due to Windows and Linux not having a simulator for running SwiftUI code,
-this code requires the use MacOS and Xcode as the IDE.
+this code requires the use of MacOS and Xcode as the IDE.
 
 After cloning or downloading this project, open the project on Xcode.
 
